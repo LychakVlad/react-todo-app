@@ -4,13 +4,14 @@ import { BsTrash } from 'react-icons/bs'
 import cn from 'classnames'
 
 
+
 const ToDoItem = ({ activity, changeState, deleteState }) => {
 
   console.log(activity.id)
 
   return (
 
-    <div className={cn('flex items-center m-4 border-2 p-4 rounded-3xl bg-slate-100 justify-between  transition-opacity duration-300 max-w-7xl', { 'opacity-70 ': activity.isCompleted })} >
+    <div className={cn('flex items-center m-4 border-2 p-4 rounded-3xl bg-slate-100 justify-between  transition-all duration-500 max-w-7xl', { 'opacity-70 ': activity.isCompleted })} >
       <div className='flex items-center'>
         <button
           onClick={() => changeState(activity.id)}
@@ -24,7 +25,7 @@ const ToDoItem = ({ activity, changeState, deleteState }) => {
       </div>
       <button
         onClick={() => deleteState(activity.id)}
-        className='mx-4'>
+        className='mx-4 hover:text-sky-500  transition-colors duration-300'>
         <BsTrash size={26} className='text-sky-700  hover:text-sky-500  transition-colors duration-300 ' />
       </button>
     </div >
