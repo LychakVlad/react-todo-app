@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Button from './UI/Button'
 import Input from './UI/Input'
+import cn from 'classnames'
 
 const ToDoAdd = ({ create }) => {
 
@@ -13,9 +14,9 @@ const ToDoAdd = ({ create }) => {
     }
     create(newActivity)
     setActivity({ title: '' })
-
   }
 
+  
 
 
 
@@ -30,10 +31,12 @@ const ToDoAdd = ({ create }) => {
           type='text'
         />
         <Button
+          className={cn("bg-sky-700 rounded-3xl p-2 m-4 transition-opacity duration-500 hover:opacity-70", { "opacity-0 pointer-events-none": (activity.title.length == 0) })}
           onClick={addNewActivity} />
       </form>
     </div>
   )
+
 }
 
 export default ToDoAdd
