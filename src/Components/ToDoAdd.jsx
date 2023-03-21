@@ -10,7 +10,7 @@ const ToDoAdd = ({ create }) => {
   const addNewActivity = (e) => {
     e.preventDefault();
     const newActivity = {
-      ...activity, id: Date.now()
+      ...activity, id: Date.now(), isCompleted: false
     }
     create(newActivity)
     setActivity({ title: '' })

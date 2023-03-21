@@ -30,20 +30,24 @@ function App() {
     setActivity(copy.filter(t => t.id !== id))
   }
 
-  const checkState = () => {
+  const isFalse = () => {
     const copy = [...activities];
     const current = copy.filter(t => t.isCompleted !== true)
-    console.log(current)
+    return current
   }
 
-  checkState(activities)
+  const isTrue = () => {
+    const copy = [...activities];
+    const current = copy.filter(t => t.isCompleted !== false)
+    return current
+  }
 
   return (
-    <div className="w-full h-screen font-open-sans flex items-center flex-col bg-slate-200">
+    <div className="w-full h-full min-h-screen font-open-sans flex items-center flex-col bg-slate-200">
       <p className=" text-sky-700 text-7xl font-bold my-4">TO DO</p>
-      <div className="w-4/6 h-5/6 border-slate-300 rounded-2xl border-y border-x p-7 bg-white">
+      <div className="w-3/5 min-h-screen border-slate-300 rounded-2xl border-y border-x p-7 my-16 bg-white">
         <ToDoAdd create={createActivity} />
-        <ToDoList activities={activities} changeState={changeState} deleteState={deleteState} />
+        <ToDoList activities={activities} changeState={changeState} deleteState={deleteState} isFalse={isFalse} isTrue={isTrue} />
 
       </div>
     </div>
