@@ -16,7 +16,7 @@ const ToDoAdd = ({ create }) => {
     setActivity({ title: '' })
   }
 
-  
+
 
 
 
@@ -31,7 +31,7 @@ const ToDoAdd = ({ create }) => {
           type='text'
         />
         <Button
-          className={cn("bg-sky-700 rounded-3xl p-2 m-4 transition-opacity duration-500 hover:opacity-70", { "opacity-0 pointer-events-none": (activity.title.length == 0) })}
+          className={cn("bg-sky-700 rounded-3xl p-2 m-4 transition-opacity duration-500 hover:opacity-70", { "opacity-0 pointer-events-none": (activity.title.length === 0) })}
           onClick={addNewActivity} />
       </form>
     </div>

@@ -5,9 +5,7 @@ import cn from 'classnames'
 
 
 
-const ToDoItem = ({ activity, changeState, deleteState }) => {
-
-  console.log(activity.id)
+const ToDoItem = ({ activity, changeState, deleteState}) => {
 
   return (
 
@@ -20,7 +18,7 @@ const ToDoItem = ({ activity, changeState, deleteState }) => {
         </button>
         <p className={'font-open-sans text-lg  font-medium  relative'}>
           {activity.title}
-          <span className={cn('no-underline absolute block bottom-3  w-full max-w-5xl h-0.5 bg-gray-900 transition-all duration-400 ', { 'w-0': !activity.isCompleted })}></span>
+          <span className={cn('no-underline absolute block bottom-3  w-0 max-w-5xl h-0.5 bg-gray-900 transition-all duration-400 ', { 'w-full': activity.isCompleted })}></span>
         </p>
       </div>
       <button
