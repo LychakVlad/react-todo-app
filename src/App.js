@@ -48,7 +48,6 @@ function App() {
       <div className="w-3/5 min-h-screen border-slate-300 rounded-2xl border-y border-x p-7 my-16 bg-white">
         <ToDoAdd create={createActivity} />
         <ToDoList activities={activities} changeState={changeState} deleteState={deleteState} isFalse={isFalse} isTrue={isTrue} />
-
       </div>
     </div>
   );
