@@ -7,14 +7,6 @@ import cn from 'classnames'
 
 const ToDoItem = ({ activity, changeState, deleteState }) => {
 
-  const [error, setError] = useState('')
-
-  let actItem = activity.title.split(' ').join('')
-
-  if (actItem.length === 0) {
-    setError('Error Occured')
-  }
-
   return (
 
     <div className={cn('flex items-center m-4 border-2 p-4 rounded-3xl bg-slate-100 justify-between  transition-all duration-500 max-w-7xl', { 'opacity-70 ': activity.isCompleted })} >
@@ -34,7 +26,6 @@ const ToDoItem = ({ activity, changeState, deleteState }) => {
         className='mx-4 hover:text-sky-500  transition-colors duration-300'>
         <BsTrash size={26} className='text-sky-700  hover:text-sky-500  transition-colors duration-300 ' />
       </button>
-      {error && console.log(error)}
     </div >
 
   )
