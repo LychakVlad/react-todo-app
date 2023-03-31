@@ -16,9 +16,8 @@ const ToDoItem = ({ activity, changeState, deleteState }) => {
           className='border-2  rounded-lg mx-4 bg-white w-10 h-10'>
           <BsCheck size={38} className={cn('text-sky-700 flex items-center transition-opacity duration-300 ', { 'opacity-0': !activity.isCompleted })} />
         </button>
-        <p className={'font-open-sans text-lg  font-medium  relative'}>
+        <p className={cn('font-open-sans text-lg  font-medium  relative', { 'line-through': activity.isCompleted })}>
           {activity.title}
-          <span className={cn('no-underline absolute block bottom-3  w-0 max-w-5xl h-0.5 bg-gray-900 transition-all duration-400 ', { 'w-full': activity.isCompleted })}></span>
         </p>
       </div>
       <button

@@ -11,8 +11,8 @@ const ToDoList = ({ activities, changeState, deleteState, isFalse, isTrue }) => 
 
 
   return (
-    < div className='h-full relative overflow-x-hidden'>
-      <div className={cn('absolute flex items-center justify-center w-full min-h-full text-6xl font-semibold text-sky-800 mx-5 opacity-0 transition-opacity duration-300 pointer-events-none', { 'opacity-50 relative py-12': activities.length === 0 })}>Well done!</div>
+    < div className='relative overflow-x-hidden'>
+      <div className={cn('absolute flex items-center justify-center text-6xl font-semibold text-sky-800 opacity-0 transition-opacity duration-300 pointer-events-none max-lg:p-0', { 'opacity-50 relative py-12': activities.length === 0 })}>Well done!</div>
       <TransitionGroup>
         <div className={cn('text-3xl font-medium text-sky-800  opacity-1 transition-all duration-300  ', { 'opacity-0 absolute': isFalseList.length === 0 })}>Active:</div>
         {
