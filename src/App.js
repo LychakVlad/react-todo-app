@@ -43,9 +43,9 @@ function App() {
   }
 
   return (
-    <div className="w-full h-full font-open-sans flex items-center flex-col bg-slate-200">
-      <p className=" text-sky-700 text-7xl font-bold my-4">TO DO</p>
-      <div className="w-3/5 border-slate-300 rounded-2xl border-y border-x p-7 my-16 bg-white">
+    <div className="w-full  min-h-screen font-open-sans flex items-center flex-col bg-slate-200  py-6">
+      <p className=" text-sky-700 text-7xl font-bold">TO DO</p>
+      <div className="min-h-full h-2/4 w-3/5 border-slate-300 rounded-2xl border-y border-x p-7 my-16 bg-white ">
         <ToDoAdd create={createActivity} />
         <ToDoList activities={activities} changeState={changeState} deleteState={deleteState} isFalse={isFalse} isTrue={isTrue} />
       </div>
