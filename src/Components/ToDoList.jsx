@@ -14,7 +14,7 @@ const ToDoList = ({ activities, changeState, deleteState, isFalse, isTrue }) => 
     < div className='min-h-screen relative overflow-x-hidden'>
       <div className={cn('absolute flex items-center justify-center w-full min-h-full text-6xl font-semibold text-sky-800 mx-5 opacity-0 transition-opacity duration-300 pointer-events-none', { 'opacity-50': activities.length === 0 })}>Well done!</div>
       <TransitionGroup>
-        <div className={cn('text-3xl font-medium text-sky-800 mx-5 opacity-1 transition-opacity duration-300 ', { 'opacity-0': isFalseList.length === 0 })}>Active:</div>
+        <div className={cn('text-3xl font-medium text-sky-800  opacity-1 transition-all duration-300  ', { 'opacity-0 absolute': isFalseList.length === 0 })}>Active:</div>
         {
           isFalseList.map((activity) =>
             <CSSTransition
@@ -25,7 +25,7 @@ const ToDoList = ({ activities, changeState, deleteState, isFalse, isTrue }) => 
             </CSSTransition>
           )
         }
-        <div className={cn('text-3xl font-medium text-sky-800 mx-5 opacity-1 transition-opacity duration-300', { 'opacity-0': isTrueList.length === 0 })}>Completed:</div>
+        <div className={cn('text-3xl font-medium text-sky-800 opacity-1 transition-opacity duration-300', { 'opacity-0': isTrueList.length === 0 })}>Completed:</div>
         {
           isTrueList.map((activity) =>
             <CSSTransition

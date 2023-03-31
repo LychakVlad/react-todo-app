@@ -9,7 +9,7 @@ const ToDoItem = ({ activity, changeState, deleteState }) => {
 
   return (
 
-    <div className={cn('flex items-center m-4 border-2 p-4 rounded-3xl bg-slate-100 justify-between  transition-all duration-500 max-w-7xl', { 'opacity-70 ': activity.isCompleted })} >
+    <div className={cn('flex items-center my-4 border-2 p-4 rounded-3xl bg-slate-100 justify-between  transition-all duration-500 max-w-7xl', { 'opacity-70 ': activity.isCompleted })} >
       <div className='flex items-center'>
         <button
           onClick={() => changeState(activity.id)}

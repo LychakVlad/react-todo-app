@@ -30,9 +30,9 @@ const ToDoAdd = ({ create }) => {
 
   return (
     <div>
-      <form className="flex  items-start  min-w-full  justify-between">
-        <p className="text-3xl font-semibold text-sky-700 mx-5"> Anything to do?</p>
-        <div className='flex  flex-col w-full  justify-center'>
+      <form className="flex  min-w-full  items-center">
+        <p className="text-3xl font-semibold text-sky-700 w-full"> Anything to do?</p>
+        <div className='flex  flex-col w-full  justify-center relative'>
           <Input
             value={activity.title}
             className='p-3 w-full border-2 border-sky-700 rounded-md focus:outline-none focus:border-sky-500 font-open-sans font-medium text-lg'
@@ -40,7 +40,7 @@ const ToDoAdd = ({ create }) => {
             placeholder='Write it down'
             type='text'
           />
-          {<div className={cn('opacity-0 text-red-500 p-4 transition-opacity duration-300', { 'opacity-100': ((inputEmpty && error)) })}>{error}</div>}
+          {<div className={cn('opacity-0 text-red-500 transition-opacity duration-300 absolute left-4  top-16', { 'opacity-100': ((inputEmpty && error)) })}>{error}</div>}
         </div>
 
 
