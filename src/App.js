@@ -6,7 +6,7 @@ import ToDoList from "./Components/ToDoList";
 function App() {
 
   const [activities, setActivity] = useState([
-    { id: 1, title: 'Learn the basics of React hooks', isCompleted: false },
+    { id: 1, title: 'Learn the basics of Next.js', isCompleted: false },
     { id: 2, title: 'Learn the basics of Redux', isCompleted: false },
     { id: 3, title: 'End my e-commerce website project', isCompleted: true },
   ])
