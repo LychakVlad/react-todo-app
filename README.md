@@ -22,7 +22,7 @@
 
 ## About The Project
 
-In this app you can add tasks to your list and mark them as done or undone.
+Todo list app built using React. The application allows users to create and manage their to-do list with features such as adding and deleting tasks. The project includes a simple, yet modern user interface that provides a responsive design for optimal user experience on both desktop and mobile devices.
 
 ### Built With
 
